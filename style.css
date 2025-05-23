@@ -1,0 +1,177 @@
+/* Updated Color Scheme with Responsive Flexbox Layout */
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2D3436; /* Dark Gray */
+    background-color: #FFFFFF; /* White */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    color: #003366; /* Deep Blue */
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #2D3436; /* Dark Gray */
+    margin-bottom: 20px;
+}
+
+/* Month Navigation */
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.month-link {
+    background-color: #003366; /* Deep Blue */
+    color: #FFFFFF; /* White */
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.month-link:hover {
+    background-color: #66B2FF; /* Light Blue */
+    color: #003366; /* Deep Blue */
+    transform: translateY(-2px);
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(45, 52, 54, 0), rgba(45, 52, 54, 0.75), rgba(45, 52, 54, 0));
+    margin: 30px 0;
+}
+
+/* Week Sections */
+.month-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.week-section {
+    background-color: #E6F2FF; /* Soft Blue */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,51,102,0.1);
+    transition: all 0.3s ease;
+}
+
+.week-section:hover {
+    box-shadow: 0 5px 15px rgba(0,51,102,0.2);
+}
+
+.week-section h2, .week-section h3, .week-section h4 {
+    color: #003366; /* Deep Blue */
+    margin-top: 0;
+    border-bottom: 1px solid #99c2ff;
+    padding-bottom: 10px;
+}
+
+.summary {
+    font-style: italic;
+    color: #2D3436; /* Dark Gray */
+}
+
+/* Additional Content */
+.additional-content {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #99c2ff;
+}
+
+.hidden {
+    display: none;
+}
+
+.attachments {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.attachments h3, .attachments h4 {
+    margin-bottom: 10px;
+    color: #003366; /* Deep Blue */
+}
+
+.attachments a {
+    color: #66B2FF; /* Light Blue */
+    text-decoration: none;
+}
+
+.attachments a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.toggle-btn {
+    background-color: #003366; /* Deep Blue */
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.toggle-btn:hover {
+    background-color: #66B2FF; /* Light Blue */
+    color: #003366;
+    transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+    transform: translateY(0);
+}
+
+.toggle-btn.active {
+    background-color: #e74c3c;
+    color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .month-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .month-link {
+        flex-grow: 0;
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+.additional-content img {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
